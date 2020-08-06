@@ -1,0 +1,102 @@
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <h2 class="text-center text-primary">Sign Up</h2>
+    <hr />
+
+    <div class="form-group">
+        <input type="text" [ngClass]="{
+            'is-invalid':
+              registerForm.get('companyName').touched &&
+              registerForm.get('companyName').errors
+          }" class="form-control" formControlName="companyName" placeholder="Company Name" />
+        <div class="invalid-feedback">Please choose a Company Name</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" [ngClass]="{
+            'is-invalid':
+              registerForm.get('contactName').touched &&
+              registerForm.get('contactName').errors
+          }" class="form-control" formControlName="contactName" placeholder="Contact Name" />
+        <div class="invalid-feedback">Please choose a Contact Name</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" [ngClass]="{
+            'is-invalid':
+              registerForm.get('contactTitle').touched &&
+              registerForm.get('contactTitle').errors
+          }" class="form-control" formControlName="contactTitle" placeholder="Contact Title" />
+        <div class="invalid-feedback">Please choose a Contact Title</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" [ngClass]="{
+            'is-invalid':
+              registerForm.get('address').touched &&
+              registerForm.get('address').errors
+          }" class="form-control" formControlName="address" placeholder="Address" />
+        <div class="invalid-feedback">Please choose a address</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" [ngClass]="{
+            'is-invalid':
+              registerForm.get('city').touched &&
+              registerForm.get('city').errors
+          }" class="form-control" formControlName="city" placeholder="City" />
+        <div class="invalid-feedback">Please choose a city</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" [ngClass]="{
+            'is-invalid':
+              registerForm.get('region').touched &&
+              registerForm.get('region').errors
+          }" class="form-control" formControlName="region" placeholder="region" />
+        <div class="invalid-feedback">Please choose a region</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" [ngClass]="{
+            'is-invalid':
+              registerForm.get('country').touched &&
+              registerForm.get('country').errors
+          }" class="form-control" formControlName="country" placeholder="country" />
+        <div class="invalid-feedback">Please choose a country</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" [ngClass]="{
+            'is-invalid':
+              registerForm.get('postalCode').touched &&
+              registerForm.get('postalCode').errors
+          }" class="form-control" formControlName="postalCode" placeholder="postalCode" />
+        <div class="invalid-feedback">Please choose a postalCode</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" [ngClass]="{
+            'is-invalid':
+              registerForm.get('phone').touched &&
+              registerForm.get('phone').errors
+          }" class="form-control" formControlName="phone" placeholder="phone" />
+        <div class="invalid-feedback">Please choose a phone</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" [ngClass]="{
+            'is-invalid':
+              registerForm.get('fax').touched &&
+              registerForm.get('fax').errors
+          }" class="form-control" formControlName="fax" placeholder="fax" />
+        <div class="invalid-feedback">Please choose a fax</div>
+    </div>
+
+    <div class="form-group text-center">
+        <button class="btn btn-success mr-2" [disabled]="registerForm.invalid" type="submit">Register</button>
+        <button class="btn btn-default" type="button" (click)="cancel()">
+            Cancel
+        </button>
+    </div>
+
+</form>
